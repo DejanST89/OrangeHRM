@@ -11,7 +11,7 @@ public class MyInfoPage extends BasePage{
     WebElement date;
 
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[5]/button")
-    WebElement Save;
+    WebElement SaveButton;
     public MyInfoPage(ChromeDriver driver){
         this.driver=driver;
         PageFactory.initElements(driver,this);
@@ -21,5 +21,8 @@ public class MyInfoPage extends BasePage{
     }
     public void DateInput(String dateof){
         date.sendKeys(dateof);
+    }
+    public void SaveButton(){
+        SaveButton.submit();
     }
 }

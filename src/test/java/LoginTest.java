@@ -19,12 +19,12 @@ public class LoginTest extends BaseTest{
     }
     @Test
     public void LoginonPage(){
-        loginPage.Login("Admin","admin123");
+        loginPage.LoginOnPage();
         Assert.assertEquals(driver.getCurrentUrl(),"https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index");
     }
     @Test
-    public void LoginonPageWithNoValidData() {
-        loginPage.Login("Admin", "admin");
+    public void LoginonPageWithNoValidData(){
+        loginPage.LoginOnPage();
         Assert.assertEquals(loginPage.eror(), "Invalid credentials");
     }
     @AfterMethod

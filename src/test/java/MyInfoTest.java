@@ -18,12 +18,16 @@ public class MyInfoTest extends BaseTest{
          myInfoPage=new MyInfoPage(driver);
      }
      @Test
-    public void MyInfoTest (){
-         loginPage.Login("Admin","admin123");
+    public void MyInfoTest ()throws InterruptedException{
+         loginPage.LoginOnPage();
+         Thread.sleep(2000);
          leftMenuPage.Meni();
+         Thread.sleep(2000);
          myInfoPage.EnterName("Dejan");
+         Thread.sleep(2000);
          myInfoPage.DateInput("1989-11-23");
-         myInfoPage.Save
+         Thread.sleep(2000);
+         myInfoPage.SaveButton.click();
      }
      @AfterMethod
     public void After(){

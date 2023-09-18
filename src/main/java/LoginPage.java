@@ -23,9 +23,9 @@ public class LoginPage extends BasePage{
     public String eror(){
         return ErorMessage.getText();
     }
-    public void Login(String name,String passw){
-        userName.sendKeys(name);
-        pass.sendKeys(passw);
+    public void LoginOnPage(){
+        userName.sendKeys("Admin");
+        pass.sendKeys("admin123");
         loginButton.submit();
     }
 
